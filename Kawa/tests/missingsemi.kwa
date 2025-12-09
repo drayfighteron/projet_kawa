@@ -1,0 +1,8 @@
+var int x
+// on oublie le ; ici
+
+main {
+  x = 42
+  // on oublie aussi le ; ici
+  print(x)
+}

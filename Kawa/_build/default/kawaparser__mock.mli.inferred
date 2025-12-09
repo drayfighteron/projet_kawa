@@ -1,0 +1,70 @@
+type token =
+    WHILE
+  | VOID_T
+  | VAR
+  | TRUE
+  | THIS
+  | STAR
+  | SLASH
+  | SEMI
+  | RPAR
+  | RETURN
+  | PRINT
+  | PLUS
+  | PERCENT
+  | OR
+  | NEW
+  | NEQ
+  | MINUS
+  | METHOD
+  | MAIN
+  | LT
+  | LPAR
+  | LE
+  | INT_T
+  | INT of int
+  | IF
+  | IDENT of string
+  | FALSE
+  | EXTENDS
+  | EQEQ
+  | EQ
+  | EOF
+  | END
+  | ELSE
+  | DOT
+  | COMMA
+  | CLASS
+  | BOOL_T
+  | BEGIN
+  | BANG
+  | ATTRIBUTE
+  | AND
+exception ParseError of string
+val parse_error : string -> 'a
+val menhir_begin_marker : int
+val xv_var_decl_list : (string * Kawa.typ) list
+val xv_var_decl : (string * Kawa.typ) list
+val xv_type_ : Kawa.typ
+val xv_seq : Kawa.seq
+val xv_program : Kawa.program
+val xv_param_list_opt : (string * Kawa.typ) list
+val xv_param_list : (string * Kawa.typ) list
+val xv_opt_extends : string option
+val xv_one_decl_init : string * Kawa.expr option
+val xv_method_defs : Kawa.method_def list
+val xv_method_def : Kawa.method_def
+val xv_mem_access : Kawa.mem_access
+val xv_maybe_init : Kawa.expr option
+val xv_instr : Kawa.instr
+val xv_global_decls : (string * Kawa.typ * Kawa.expr option) list
+val xv_global_decl : (string * Kawa.typ * Kawa.expr option) list
+val xv_expr : Kawa.expr
+val xv_decl_init_list : (string * Kawa.expr option) list
+val xv_class_defs : Kawa.class_def list
+val xv_class_def : Kawa.class_def
+val xv_attr_decls : (string * Kawa.typ * Kawa.expr option) list
+val xv_attr_decl : (string * Kawa.typ * Kawa.expr option) list
+val xv_arg_list_opt : Kawa.expr list
+val xv_arg_list : Kawa.expr list
+val menhir_end_marker : int

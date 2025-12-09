@@ -1,0 +1,7 @@
+main {
+  print(true && false);
+  print(true || false);
+  if (true && !(false || false)) {
+    print(666);
+  }
+}
